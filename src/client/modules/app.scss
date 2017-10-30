@@ -1,0 +1,44 @@
+@import '../styles/variables';
+
+.wrapper {
+  display: flex;
+  align-items: stretch;
+  min-height: 100%;
+
+  a {
+    color: $main-color;
+  }
+
+  .nav {
+    width: 200px;
+    background-color: $main-color;
+  }
+
+  .header {
+    color: #fff;
+    background-color: #333;
+
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+
+  main {
+    flex: 1;
+
+    .main {
+      padding: 1em;
+    }
+  }
+}
+
+.ui {
+  &.menu, &.button, &.form, &.checkbox {
+    font-size: 1em;
+  }
+
+  &.primary.button {
+    background-color: $main-color;
+  }
+}

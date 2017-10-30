@@ -1,0 +1,10 @@
+version: '2'
+services:
+  central_hub:
+    env_file: .env
+    ports:
+     - "4001:4001"
+    networks:
+     - back
+networks:
+  back: {}

@@ -1,0 +1,23 @@
+@import 'reset';
+@import '../components/login';
+@import 'variables';
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font: 13px/1 'Open Sans';
+
+  &.unauthenticated {
+    background-color: $main-color;
+  }
+}
+
+#root {
+  height: 100%
+}
+
+h1 {
+  font-size: 2em;
+}

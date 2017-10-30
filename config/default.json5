@@ -1,0 +1,4 @@
+{
+  apiHost: "http://localhost:3000",
+  adminApiHost: "http://localhost:3001"
+}

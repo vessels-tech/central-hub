@@ -1,0 +1,30 @@
+.edit-form {
+  margin: 1em 0;
+}
+.edit-modal {
+  border-style: solid;
+  border-color: #262626;
+  border-width: .1em;
+  border-radius: 1em;
+  display:inline-block;
+  overflow: hidden;
+}
+
+.edit-modal form {
+  padding: .5em;
+  margin: .5em;
+}
+
+.edit-modal a {
+  padding: .5em;
+  margin: .5em;
+}
+
+.edit-modal-header h1 {
+  padding: 1.0em;
+  background-color: #262626;
+}
+
+.edit-modal-header h1 {
+  color: #fcfcfc;
+}

@@ -1,0 +1,42 @@
+general:
+  branches:
+    ignore:
+      - master
+  artifacts:
+    - ./coverage
+
+machine:
+  pre:
+    - curl -sSL https://s3.amazonaws.com/circle-downloads/install-circleci-docker.sh | bash -s -- 1.10.0
+  services:
+    - docker
+  node:
+    version: 6.5.0
+  environment:
+    AWS_ACCOUNT_ID: 886403637725
+    APP_NAME: central-hub
+    DOCKER_IMAGE: leveloneproject/$APP_NAME
+    AWS_REGION: us-west-2
+    BUCKET: elasticbeanstalk-$AWS_REGION-$AWS_ACCOUNT_ID
+
+dependencies:
+  pre:
+    - sudo rm -f /usr/local/bin/docker-compose
+    - sudo pip install docker-compose==1.8.1
+    - curl -udwolla:$NPM_TOKEN "https://modusbox.jfrog.io/modusbox/api/npm/level1-npm-release/auth/leveloneproject" >> .npmrc
+  post:
+    - docker build -t $DOCKER_IMAGE .
+    - npm rebuild node-sass
+
+test:
+  pre:
+    - mkdir -p ./test/results
+  override:
+    - set -o pipefail && npm -s run test:xunit > ./test/results/tape.xml
+    - npm -s run test
+
+deployment:
+  dev:
+    tag: /v[0-9]+(\.[0-9]+)*/
+    commands:
+      - node deploy/node/index.js

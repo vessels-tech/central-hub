@@ -1,0 +1,4 @@
+version: '2'
+services:
+  central-hub:
+    image: ${DOCKER_IMAGE}:latest
