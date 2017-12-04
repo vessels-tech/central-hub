@@ -6,8 +6,10 @@ import App from './modules/app';
 import Dashboard from './components/dashboard';
 import Members from './connected/members';
 import Transfers from './connected/transfers';
+import Positions from './connected/positions';
 import Charges from './connected/charges';
 import CreateMember from './connected/membersCreate';
+
 import EditMember from './connected/membersEdit';
 
 export default {
@@ -31,6 +33,10 @@ export default {
         {
           path: 'members',
           component: Members
+        },
+        {
+          path: 'positions',
+          component: Positions
         },
         {
           path: 'members/create',
