@@ -2,11 +2,11 @@
 
 import React from 'react';
 import { Table } from 'semantic-ui-react';
-import TransferRow from './row';
+import PositionRow from './row';
 import Pagination from './pagination';
 import FilterButton from './filter';
 
-const TransfersTable = ({ transfers }) => (
+const PositionsTable = ({ positions }) => (
   <Table striped sortable>
     <Table.Header>
     <Table.Row>
@@ -15,18 +15,12 @@ const TransfersTable = ({ transfers }) => (
         </Table.HeaderCell>
       </Table.Row>
       <Table.Row>
-        <Table.HeaderCell>Id</Table.HeaderCell>
-        <Table.HeaderCell>Amount</Table.HeaderCell>
-        <Table.HeaderCell>Credit Account</Table.HeaderCell>
-        <Table.HeaderCell>Debit Account</Table.HeaderCell>
-        <Table.HeaderCell>State</Table.HeaderCell>
-        <Table.HeaderCell>Prepared</Table.HeaderCell>
-        <Table.HeaderCell>Executed</Table.HeaderCell>
-        <Table.HeaderCell>Rejected</Table.HeaderCell>
+        <Table.HeaderCell>Account</Table.HeaderCell>
+        <Table.HeaderCell>Net Position</Table.HeaderCell>
       </Table.Row>
     </Table.Header>
     <Table.Body>
-      {transfers.map((transfer, i) => <TransferRow key={i} transfer={transfer} />)}
+      {positions.map((position, i) => <PositionRow key={i} position={position} />)}
     </Table.Body>
     <Table.Footer>
       <Table.Row>
@@ -39,4 +33,4 @@ const TransfersTable = ({ transfers }) => (
 );
 
 
-export default TransfersTable;
+export default PositionsTable;

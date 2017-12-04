@@ -11,7 +11,8 @@ import rootReducer from './reducers/reducers';
 const defaultState = {
   members: [],
   create: {},
-  transfers,
+  positions: [],
+  transfers: [],
   charges: []
 }
 
