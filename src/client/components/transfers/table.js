@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Table } from 'semantic-ui-react';
-import Row from './row';
+import TransferRow from './row';
 import Pagination from './pagination';
 import FilterButton from './filter';
 
@@ -21,10 +21,12 @@ const TransfersTable = ({ transfers }) => (
         <Table.HeaderCell>Debit Account</Table.HeaderCell>
         <Table.HeaderCell>State</Table.HeaderCell>
         <Table.HeaderCell>Prepared</Table.HeaderCell>
+        <Table.HeaderCell>Executed</Table.HeaderCell>
+        <Table.HeaderCell>Rejected</Table.HeaderCell>
       </Table.Row>
     </Table.Header>
     <Table.Body>
-      {transfers.map((transfer, i) => <Row key={i} transfer={transfer} />)}
+      {transfers.map((transfer, i) => <TransferRow key={i} transfer={transfer} />)}
     </Table.Body>
     <Table.Footer>
       <Table.Row>
