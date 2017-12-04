@@ -1,13 +1,34 @@
 'use strict'
 
-import React from 'react';
-import Table from './table';
+import React, { Component } from 'react';
+import TransfersTable from './table';
+import 'isomorphic-fetch'
+const ReactDOM = require('react-dom');
 
-const Members = ({ transfers }) => (
-  <div className="transfers">
-    <h1>Transfers</h1>
-    <Table transfers={transfers} />
-  </div>
-)
+class Transfers extends Component {
 
-export default Members;
+  constructor() {
+    super();
+    this.state = { transfers: [] };
+  }
+
+  componentDidMount() {
+    fetch("/api/transfers", { method: 'get' })
+    .then(response => {
+      response.json().then(json => {this.setState({transfers:json});})
+    });
+  }
+
+  render() {
+    return (
+      <div className="transfers">
+        <h1>Transfers</h1>
+        <TransfersTable transfers={this.state.transfers} />
+      </div>
+    )
+  }
+
+}
+
+
+export default Transfers;
