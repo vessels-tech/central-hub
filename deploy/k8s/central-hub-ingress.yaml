@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: central-hub
+  labels:
+      app: central-hub
+spec:
+  rules:
+    - host: central-hub.local
+      http:
+        paths:
+        - backend:
+            serviceName: central-hub
+            servicePort: 4001
