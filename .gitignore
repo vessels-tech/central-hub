@@ -43,3 +43,12 @@ jspm_packages
 
 # Build artifacts
 static
+
+#package-lock.json
+package-lock.json
+
+# --------------- #
+# IntelliJ #
+# --------------- #
+.idea/
+**/*.iml
