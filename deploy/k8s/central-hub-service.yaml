@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: central-hub
+  labels:
+    app: central-hub
+spec:
+  ports:
+    - port: 4001
+      targetPort: 4001
+      name: http-web
+      protocol: TCP
+  selector:
+    app: central-hub
