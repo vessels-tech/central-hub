@@ -319,7 +319,7 @@ jobs:
       - run:
           name: setup environment vars for SNAPSHOT release
           command: |
-            echo 'export HELM_VALUE_FILENAME=$K8_HELM_VALUE_DEV_FILENAME' >> $BASH_ENV
+            echo 'export HELM_VALUE_FILENAME=$K8_HELM_VALUE_FILENAME_SNAPSHOT' >> $BASH_ENV
             echo 'export K8_RELEASE_NAME=$K8_RELEASE_NAME_SNAPSHOT' >> $BASH_ENV
             echo 'export K8_NAMESPACE=$K8_NAMESPACE_SNAPSHOT' >> $BASH_ENV
             echo 'export HELM_VALUE_SET_VALUES="--set central.centralhub.image.repository=$DOCKER_ORG/$CIRCLE_PROJECT_REPONAME --set central.centralhub.image.tag=$CIRCLE_TAG"' >> $BASH_ENV
@@ -348,9 +348,9 @@ jobs:
       - run:
           name: setup environment vars for release
           command: |
-            echo 'export HELM_VALUE_FILENAME=$K8_HELM_VALUE_PROD_FILENAME' >> $BASH_ENV
-            echo 'export K8_RELEASE_NAME=$K8_RELEASE_NAME' >> $BASH_ENV
-            echo 'export K8_NAMESPACE=$K8_NAMESPACE' >> $BASH_ENV
+            echo 'export HELM_VALUE_FILENAME=$K8_HELM_VALUE_FILENAME_PROD' >> $BASH_ENV
+            echo 'export K8_RELEASE_NAME=$K8_RELEASE_NAME_PROD' >> $BASH_ENV
+            echo 'export K8_NAMESPACE=$K8_NAMESPACE_PROD' >> $BASH_ENV
             echo 'export HELM_VALUE_SET_VALUES="--set central.centralhub.image.repository=$DOCKER_ORG/$CIRCLE_PROJECT_REPONAME --set central.centralhub.image.tag=$CIRCLE_TAG"' >> $BASH_ENV
       - run:
           <<: *defaults_deploy_prequisites
