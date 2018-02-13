@@ -13,6 +13,17 @@
     "test:unit": "tapes 'test/unit/**/*.test.js'",
     "start": "npm run build && node src/server"
   },
+  "nyc": {
+    "require": [
+      "babel-register"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "sourceMap": false,
+    "instrument": false
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mojaloop/central-hub.git"
