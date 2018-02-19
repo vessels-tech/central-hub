@@ -1,7 +1,7 @@
 'use strict'
 
-const Glue = require('glue')
-const manifest = require('./manifest')
+const Glue = require('glue');
+const manifest = require('./manifest');
 
 const composeOptions = { relativeTo: __dirname }
 

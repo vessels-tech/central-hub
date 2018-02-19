@@ -1,8 +1,8 @@
-import sinon from 'sinon';
-import assert from 'assert';
-
-import * as actions from '../../../../src/client/components/charges/actions';
-import { lookupCharges } from '../../../../src/client/components/charges/actionCreators';
+const sinon = require('sinon');
+const actions = require('../../../../src/client/components/charges/actions');
+const lookupCharges = require('../../../../src/client/components/charges/actionCreators').lookupCharges;
+const assert= require('assert');
+const { describe } = require('mocha');
 
 describe('actionCreators lookupCharges', () => {
 

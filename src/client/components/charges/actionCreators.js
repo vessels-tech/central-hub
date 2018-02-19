@@ -1,7 +1,7 @@
 'use strict';
 
-import 'isomorphic-fetch'
-import * as actions from './actions';
+require('isomorphic-fetch');
+const actions = require('./actions');
 
 const handleErrors = (response) => {
   if (!response.ok) throw Error(response.statusText);
@@ -19,6 +19,6 @@ const lookupCharges = () => {
   }
 }
 
-export {
+module.exports = {
   lookupCharges
 }
