@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 import { Form, Segment, Input, Button } from 'semantic-ui-react'
 
 import './login.scss'
 
 const Login = () => {
   return (
-    <Form size="large">
+    <Form size='large'>
       <Segment stacked>
         <Form.Field>
           <Input icon='users' iconPosition='left' placeholder='Username' />
@@ -13,7 +13,7 @@ const Login = () => {
         <Form.Field>
           <Input icon='lock' iconPosition='left' placeholder='Password' />
         </Form.Field>
-        <Button fluid size="large">
+        <Button fluid size='large'>
           Login
         </Button>
       </Segment>
@@ -21,4 +21,4 @@ const Login = () => {
   )
 }
 
-export default Login;
+export default Login

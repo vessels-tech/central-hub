@@ -1,8 +1,8 @@
-'use strict';
+'use strict'
 
-import React from 'react';
-import { Link } from 'react-router';
-import { Table } from 'semantic-ui-react';
+import React from 'react'
+import { Link } from 'react-router'
+import { Table } from 'semantic-ui-react'
 
 const PositionRow = ({ position }) => (
   <Table.Row>
@@ -12,4 +12,3 @@ const PositionRow = ({ position }) => (
 )
 
 export default PositionRow
-

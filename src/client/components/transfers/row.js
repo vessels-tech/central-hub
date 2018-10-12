@@ -23,12 +23,11 @@
 
 // export default TransferRow
 
+'use strict'
 
-'use strict';
-
-import React from 'react';
-import { Link } from 'react-router';
-import { Table } from 'semantic-ui-react';
+import React from 'react'
+import { Link } from 'react-router'
+import { Table } from 'semantic-ui-react'
 
 const TransferRow = ({ transfer }) => (
   <Table.Row>
@@ -44,4 +43,3 @@ const TransferRow = ({ transfer }) => (
 )
 
 export default TransferRow
-

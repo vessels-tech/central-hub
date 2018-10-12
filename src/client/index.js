@@ -1,11 +1,10 @@
-import React from 'react';
-import { render } from 'react-dom';
-import { Router } from 'react-router';
-import { Provider } from 'react-redux';
+import React from 'react'
+import { render } from 'react-dom'
+import { Router } from 'react-router'
+import { Provider } from 'react-redux'
 
-import routes from './routes';
-import store, { history } from './store';
-
+import routes from './routes'
+import store, { history } from './store'
 
 import './styles/main.scss'
 
@@ -15,4 +14,4 @@ const router = (
   </Provider>
 )
 
-render(router, document.getElementById('root'));
+render(router, document.getElementById('root'))

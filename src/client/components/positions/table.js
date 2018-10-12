@@ -1,16 +1,16 @@
 'use strict'
 
-import React from 'react';
-import { Table } from 'semantic-ui-react';
-import PositionRow from './row';
-import Pagination from './pagination';
-import FilterButton from './filter';
+import React from 'react'
+import { Table } from 'semantic-ui-react'
+import PositionRow from './row'
+import Pagination from './pagination'
+import FilterButton from './filter'
 
 const PositionsTable = ({ positions }) => (
   <Table striped sortable>
     <Table.Header>
-    <Table.Row>
-        <Table.HeaderCell colSpan="6" textAlign="right">
+      <Table.Row>
+        <Table.HeaderCell colSpan='6' textAlign='right'>
           <FilterButton />
         </Table.HeaderCell>
       </Table.Row>
@@ -24,13 +24,12 @@ const PositionsTable = ({ positions }) => (
     </Table.Body>
     <Table.Footer>
       <Table.Row>
-        <Table.HeaderCell colSpan="6">
+        <Table.HeaderCell colSpan='6'>
           <Pagination />
         </Table.HeaderCell>
       </Table.Row>
     </Table.Footer>
   </Table>
-);
+)
 
-
-export default PositionsTable;
+export default PositionsTable

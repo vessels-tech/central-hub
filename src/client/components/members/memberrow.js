@@ -1,7 +1,7 @@
-'use strict';
+'use strict'
 
-import React from 'react';
-import { Table } from 'semantic-ui-react';
+import React from 'react'
+import { Table } from 'semantic-ui-react'
 
 const MemberRow = ({ member }) => (
   <Table.Row>

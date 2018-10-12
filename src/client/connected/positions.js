@@ -1,9 +1,9 @@
-'use strict';
+'use strict'
 
-import { connect } from 'react-redux';
-import Positions from '../components/positions';
+import { connect } from 'react-redux'
+import Positions from '../components/positions'
 import { retrievePositions } from '../components/positions/actionCreators'
 
-const mapStateToProps = (state) => (state);
+const mapStateToProps = (state) => (state)
 
-export default connect(mapStateToProps, { retrievePositions })(Positions);
+export default connect(mapStateToProps, { retrievePositions })(Positions)

@@ -17,9 +17,9 @@ const isValidEndpoint = (endpoint) => {
   return valid
 }
 
-const forwardRequest = (request, reply) => {
+const forwardRequest = (request, h) => {
   const endpoint = request.params.param || ''
-  const apiUri = Config.API_URL
+  // const apiUri = Config.API_URL
   const adminApiUri = Config.ADMIN_API_URL
 
   // var uri = "";
@@ -28,25 +28,25 @@ const forwardRequest = (request, reply) => {
   // if (endpoint == "positions") {
   //   uri = `${apiUri}/${endpoint}?token=some-token`;
   // } else {
-  //   uri = `${adminApiUri}/${endpoint}?token=some-token`;  
-  //   console.log("Hub Server:", uri);  
+  //   uri = `${adminApiUri}/${endpoint}?token=some-token`;
+  //   console.log("Hub Server:", uri);
   // }
-  const uri = `${adminApiUri}/${endpoint}?token=some-token`;
+  const uri = `${adminApiUri}/${endpoint}?token=some-token`
   if (isValidEndpoint(endpoint)) {
     fetch(uri, { method: request.method, body: JSON.stringify(request.payload), headers: request.headers })
       .then(response => {
-        return reply(response.body).code(response.status);
+        return h.response(response.body).code(response.status)
       })
       .catch(error => {
-        return reply(error)
+        return h.response(error)
       })
   } else {
-    return reply(new Error('The requested url could not be found.'))
+    return h.response(new Error('The requested url could not be found.'))
   }
 }
 
-const health = (request, reply) => {
-  reply({ status: 'OK' }).code(200)
+const health = (request, h) => {
+  return h.response({ status: 'OK' }).code(200)
 }
 
 module.exports = {

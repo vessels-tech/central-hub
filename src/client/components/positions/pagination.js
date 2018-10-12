@@ -1,6 +1,6 @@
 'use strict'
 
-import React from 'react';
+import React from 'react'
 import { Menu, Icon } from 'semantic-ui-react'
 
 const Pagination = () => (
@@ -16,6 +16,6 @@ const Pagination = () => (
       <Icon name='right chevron' />
     </Menu.Item>
   </Menu>
-);
+)
 
-export default Pagination;
+export default Pagination

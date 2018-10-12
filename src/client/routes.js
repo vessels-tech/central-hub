@@ -1,16 +1,16 @@
 'use strict'
 
-import Login from './components/Login';
-import Unauthenticated from './components/Unauthenticated';
-import App from './modules/app';
-import Dashboard from './components/dashboard';
-import Members from './connected/members';
-import Transfers from './connected/transfers';
-import Positions from './connected/positions';
-import Charges from './connected/charges';
-import CreateMember from './connected/membersCreate';
+import Login from './components/Login'
+import Unauthenticated from './components/Unauthenticated'
+import App from './modules/app'
+import Dashboard from './components/dashboard'
+import Members from './connected/members'
+import Transfers from './connected/transfers'
+import Positions from './connected/positions'
+import Charges from './connected/charges'
+import CreateMember from './connected/membersCreate'
 
-import EditMember from './connected/membersEdit';
+import EditMember from './connected/membersEdit'
 
 export default {
   childRoutes: [

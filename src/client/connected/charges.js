@@ -1,9 +1,9 @@
-'use strict';
+'use strict'
 
-import { connect } from 'react-redux';
-import Charges from '../components/charges';
+import { connect } from 'react-redux'
+import Charges from '../components/charges'
 import { lookupCharges } from '../components/charges/actionCreators'
 
-const mapStateToProps = (state) => (state);
+const mapStateToProps = (state) => (state)
 
-export default connect(mapStateToProps, { lookupCharges })(Charges);
+export default connect(mapStateToProps, { lookupCharges })(Charges)

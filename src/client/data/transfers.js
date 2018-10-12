@@ -1,11 +1,11 @@
 'use strict'
-import Uuid from 'uuid4';
+import Uuid from 'uuid4'
 import Members from './members'
-const members = Members;
+const members = Members
 
 const createTransfer = (creditAccount, debitAccount, amount = '50.00') => {
-  var credit = creditAccount || members[Math.floor(Math.random() * members.length)];
-  var debit = debitAccount || members[Math.floor(Math.random() * members.length)];
+  var credit = creditAccount || members[Math.floor(Math.random() * members.length)]
+  var debit = debitAccount || members[Math.floor(Math.random() * members.length)]
   return {
     id: Uuid(),
     credits: [
@@ -31,11 +31,11 @@ const createTransfer = (creditAccount, debitAccount, amount = '50.00') => {
 }
 
 const createTransfers = () => {
-  const t = [];
+  const t = []
   for (var i = 0; i < 100; i++) {
-    t.push(createTransfer());
+    t.push(createTransfer())
   }
-  return t;
+  return t
 }
 
-export default createTransfers();
+export default createTransfers()

@@ -1,8 +1,8 @@
-'use strict';
+'use strict'
 
-import * as membersActions from '../components/members/actions';
+import * as membersActions from '../components/members/actions'
 
-//http://www.nikola-breznjak.com/blog/javascript/converting-a-javascript-switch-statement-into-a-function-lookup/
+// http://www.nikola-breznjak.com/blog/javascript/converting-a-javascript-switch-statement-into-a-function-lookup/
 const stateChanges = {
   [`${membersActions.MEMBERS_LOOKUP}`]: (state, action) => ({ ...state, membersLookupActive: true }),
   [`${membersActions.MEMBERS_LOOKUP_SUCCEEDED}`]: (state) => ({ ...state, membersLookupActive: false }),
@@ -16,10 +16,10 @@ const stateChanges = {
   [`${membersActions.MEMBER_EDIT_REQUEST}`]: (state) => ({ ...state, memberEditActive: true }),
   [`${membersActions.MEMBER_EDIT_SUCCEEDED}`]: (state) => ({ ...state, memberEditActive: false }),
   [`${membersActions.MEMBER_EDIT_FAILED}`]: (state) => ({ ...state, memberEditActive: false })
-};
-
-const flags = (state = {}, action) => {
-  return (typeof stateChanges[action.type] === 'function') ? stateChanges[action.type](state) : state;
 }
 
-export default flags;
+const flags = (state = {}, action) => {
+  return (typeof stateChanges[action.type] === 'function') ? stateChanges[action.type](state) : state
+}
+
+export default flags

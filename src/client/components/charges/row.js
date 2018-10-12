@@ -1,8 +1,8 @@
-'use strict';
+'use strict'
 
-import React from 'react';
-import { Link } from 'react-router';
-import { Table } from 'semantic-ui-react';
+import React from 'react'
+import { Link } from 'react-router'
+import { Table } from 'semantic-ui-react'
 
 const ChargeRow = ({ charge }) => (
   <Table.Row>

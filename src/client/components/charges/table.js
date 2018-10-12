@@ -1,15 +1,15 @@
 'use strict'
 
-import React from 'react';
-import { Table } from 'semantic-ui-react';
-import ChargeRow from './row';
-import Pagination from './pagination';
+import React from 'react'
+import { Table } from 'semantic-ui-react'
+import ChargeRow from './row'
+import Pagination from './pagination'
 
 const ChargesTable = ({ charges }) => (
   <Table striped sortable>
     <Table.Header>
       <Table.Row>
-        <Table.HeaderCell colSpan="8" textAlign="right">
+        <Table.HeaderCell colSpan='8' textAlign='right'>
         </Table.HeaderCell>
       </Table.Row>
       <Table.Row>
@@ -27,13 +27,12 @@ const ChargesTable = ({ charges }) => (
     </Table.Body>
     <Table.Footer>
       <Table.Row>
-        <Table.HeaderCell colSpan="8">
+        <Table.HeaderCell colSpan='8'>
           <Pagination />
         </Table.HeaderCell>
       </Table.Row>
     </Table.Footer>
   </Table>
-);
+)
 
-
-export default ChargesTable;
+export default ChargesTable
